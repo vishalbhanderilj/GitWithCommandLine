@@ -132,6 +132,45 @@ git push -u origin master
 
 Git: Creating & Switching Branches In Git | Git Tutorials #15
 
+Create Branch
+Git checkout -b branchName [branchname , -b new branch]
+move to develop branch
+delete files and commit on develop branch
+git checkout master 
+
+git branch ->get all branches
+
+So add seperate branch by using git checkout -b branchname perfrom code 
+
+git checkout master Make sure while moving branch run GIT STATUS as nothing to worry and successfully commit to branch
+
+Simply checkout master branch and execute
+git merge your child branchname
+
+if conflict occured then simply solve it and follow stpes to commit
+git add .
+git commit -m "resolved conflict" or git commit -a -m "resolved conflict"
+
+Resolving Merge Conflicts (With Example) | Git Tutorials #17
+<< conflict resolution markers
+Branch Management
+git branch -v -> show git has and commit message
+git branch --merged
+git branch --no-merged
+
+delete branch 
+execute belowe command after merged branch
+git branch -d branchname -> execute error if this branch not merged
+git branch -D branchname -> whether branch is merged or not then delete successfully with out error
+
+
+Upload sub branch to github -> git push origin branchname
+git push origin bugfix:mybugfix
+
+git checkout master
+git push -d origin bugfix
+
+
 
 
 

@@ -1,0 +1,46 @@
+1)Run the power shell as administrator
+2)Downlaod Chocolaty to manage packages from below link,
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+3)choco Install -y microsoft-windows-terminal git[optional]
+4)Install-module posh-git -Scope CurrentUSer
+5)Install-module oh-my-posh -Scope CurrentUser
+6)Install-module posh-git
+7)Install-module oh-my-posh
+8)Set-Prompt
+9)Set path to C:\Windows\System32
+10)Install font from google by search "skunklabz git font"
+11)Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/kgodoy/nerd-fonts-downloader/master/nerd-fonts-downloader.ps1'))
+12)Set path to C:\Windows\System32 notepad $profile
+13)Edit File and Add Import-module oh-my-posh \n Import-module posh-git \n set-theme paradox 
+14)Set path to C:\Users\PreferedUser Set-ExecutionPolicy remotesigned
+15)Open Windows Terminal and Add "fontface" : "Meslo LG L for Powerline"
+
+Run As Administrator -> C:\Windows\System32
+Run As normal -> C:\Users\PreferedUser command : cd ~ [home directory] 
+
+Second way
+1)Run the power shell as administrator
+2)> choco if not available than install this packaeg manager tool
+3) choco install -y conemu notepadplusplus vscode git [Install these based on your need]
+4) administrator
+5) cd ~ switch to home directory
+6)> $profile [C:\Users\iVishal\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1]
+7)Set path to adminstrator Set-ExecutionPolicy -Executepolicy Bypass -> ALL
+8) $profile and add cd ~/git in file
+9) open conemu and configure fonts and theme
+10) inside git repository you can install oh-my-posh and posh-git by executing Install-module posh-git -Scope CurrentUser,Install-module oh-my-posh -Scope CurrentUser 
+11) $profile and edit it by adding Import-module oh-my-posh \n Import-module posh-git \n set-theme paradox \n Set-theme paradox
+12) in git repo install skunklabz font support by oh-my-posh
+13) Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/kgodoy/nerd-fonts-downloader/master/nerd-fonts-downloader.ps1'))
+14) cd ~/git -> mkdir newrepo -> switch to newrepo 
+15) git init
+16) history 
+17) if you remeber hostoty then open $profile and add below script
+18) # Remember History
+$HistoryFilePath = Join-Path ([Environment]::GetFolderPath('UserProfile')) .ps_history
+Register-EngineEvent PowerShell.Exiting -Action { Get-History | Export-Clixml $HistoryFilePath } | out-null
+if (Test-path $HistoryFilePath) { Import-Clixml $HistoryFilePath | Add-History }
+19) Add Aliases
+20) inside git>newrepo -> install-module Get-ChileItemColor -AllowClobber
+21) Add PSReadLine
+22) Setup git Profile 

@@ -1,0 +1,137 @@
+Three stage architecture
+1) Working directory
+2) staging area
+3) git repository
+
+File Status
+1) untreacked  -> Add the file --> unmodified   git add --a
+2) unmodified  -> edit the file --> modified
+3) modified    -> stage the file -> staged
+4) staged  -> commit -> unmodified   -> remove the file -> untracked
+
+
+
+git config --global user.name "USERNAME"
+git config --global user.email "Email"
+
+git status - Check Status of repository
+git init - Create directory to git
+
+git add .
+git add --a -> add all file in staging area -> or we can use this command to add in treacking mode
+Check Status with git status
+
+create snapshot 
+git commit -m "Initial Commit"
+
+git log -> to check status
+
+git add FileName -> to add specific file to Staging area 
+git commit -m "Message"
+
+rm -rf .git -> delete all treack and .git folder from directory
+
+pwd ->  present working directory
+ls -> list
+cd -> change directory
+
+git clone url -> to clone directory into local machine 
+
+touch "FileName" -> create file inside reporsitory
+
+Git Diff -> find difference between working directory and staging area
+Git diff --stage --> find difference between previous commit and staging area
+
+Skipping the staging area
+git commit -a -m "Direct Commit" -> it will only direct commit with out adding those files inn staging area
+this command will not commit untracked files-> Once you need to add thoses files in staging are by git add "filename", git add --a
+
+Moving and renaming file
+Rename File 
+git status -> When you add files in staging area at that time git know you jsut renamed your filename instead of creataing new one
+git rm Filename to delete or remove file
+
+rename or move file
+git mv oldfile neewfile
+
+Untrack file inbetween or after adding in .gitignore file
+git rm --cached filename
+-n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+Git Log: Viewing & Changing Commits In Git | Git Tutorials #11
+Git log 
+git log -p -> show history with removed files or its content
+git log -p -2 [numbers for add limitation of latest log]
+git log --stat check short detailof commit check short summary
+git log --pretty=oneline gives all commit with one line of commit message
+git log --pretty=short  give commit message with author detail
+git log --pretty=full
+git log --since=2.days -> check only past 2 days commit
+git log --since=2.months -> check only past 2 month commit
+git log --since=2.years -> check only past 2 year commit
+
+git log --pretty=format:"%h -- %an" -> git all commit log with has key and author
+
+edit old commit message 
+git commit --amend
+
+Unstaging & Unmodifying Files In Git | Git Tutorials #12
+(use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory) Danger
+git rm --cached filename to unstage if it is in stagging area-Danger
+git checkout -- filename to get old one file -> except .gitignore
+git checkout -f -> restore all or match working directory with last commit except .gitignore
+
+GitHub: Working with Remote Repositories | Git Tutorials #13
+
+
+Working with the remote repository
+1) loging to github
+2) Create new repository
+3) git remote execute
+Pull - Fetch code to local system 
+Push - Upload code to github
+Run command from github git remote add origin https://github.com/vishalbhanderilj/GitWithCommandLine.git
+Add ssh key by giving title
+
+google add ssh key github
+generate ssh key
+https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+1) $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+2)  # start the ssh-agent in the background
+$ eval $(ssh-agent -s)
+> Agent pid 59566
+
+3) $ ssh-add ~/.ssh/id_rsa
+4) tail ~/.ssh/id_rsa.pub or copy to clipboard $ clip < ~/.ssh/id_rsa.pub
+# Copies the contents of the id_rsa.pub file to your clipboard
+
+Git push -u origin master
+
+Setting Alias In Git | Git Tutorials #14
+Alias-> to convert long command to short for ex : git st instead of git status
+how can we set up
+git config --global alias.st status
+ 
+git config --global alias.last 'log -p -1'
+
+
+From git add copy paste URL in terminal
+git push -u origin master 
+
+
+Git: Creating & Switching Branches In Git | Git Tutorials #15
+
+
+
+

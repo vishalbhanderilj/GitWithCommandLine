@@ -171,6 +171,13 @@ delete  branch from git hub
 git checkout master
 git push -d origin bugfix
 
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> prod
 
 
 
